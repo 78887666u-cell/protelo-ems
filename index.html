@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Про тело ЕМС — EMS и массаж в Астрахани</title>
+  <meta name="description" content="Студия эффективных тренировок и массажа «Про тело ЕМС»: EMS-тренировки, массаж и коррекция фигуры в Астрахани. Площадь Шаумяна, 5 и улица Магистральная, 29.">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Caveat:wght@700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="splash" id="splash" aria-hidden="true">
+  <svg class="splash__bolt" viewBox="0 0 100 160"><path d="M62 4 L18 92 L48 92 L36 156 L84 62 L52 62 Z"/></svg>
+  <p class="splash__pct"><span id="splash-n">0</span>%</p>
+  <p class="splash__txt">Включаем костюм…</p>
+</div>
+
+<button class="music" id="music" type="button" aria-pressed="false" aria-label="Включить музыку">
+  <svg class="music__icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path class="music__spk" d="M4 9h4l5-4v14l-5-4H4z"/>
+    <path class="music__off" d="M16 9l5 6M21 9l-5 6"/>
+    <g class="music__on"><path d="M16 9.5c1 .8 1 4.2 0 5"/><path d="M18.5 7c2.2 2 2.2 8 0 10"/></g>
+  </svg>
+  <span class="music__eq" aria-hidden="true"><i></i><i></i><i></i></span>
+</button>
+
+<div class="brand">
+  <img class="brand__logo" src="img/logo.png" alt="Про тело ЕМС — студия эффективных тренировок и массажа" width="760" height="235">
+</div>
+
+<header class="hero" id="home">
+  <div class="hero__media" aria-hidden="true"><img class="hero__photo" src="img/ems-plank.jpg" alt=""></div>
+  <canvas class="sparks" aria-hidden="true"></canvas>
+  <p class="hero__hint" aria-hidden="true">коснитесь экрана ⚡</p>
+  <p class="hero__place">Астрахань · пл. Шаумяна, 5 · ул. Магистральная, 29</p>
+  <h1 class="hero__title">
+    <span class="hero__big">40&nbsp;минут</span>
+    <span class="hero__rest">вместо двух часов в&nbsp;зале</span>
+  </h1>
+  <!-- Подпись страницы: линия импульсов EMS -->
+  <svg class="pulse" viewBox="0 0 600 60" preserveAspectRatio="none" aria-hidden="true">
+    <polyline points="0,40 70,40 80,40 88,8 96,52 104,40 170,40 180,40 188,8 196,52 204,40 270,40 280,40 288,8 296,52 304,40 370,40 380,40 388,8 396,52 404,40 470,40 480,40 488,8 496,52 504,40 600,40"/>
+  </svg>
+  <p class="hero__lead">EMS-тренировки с персональным тренером — единственные в&nbsp;городе. А ещё массаж у&nbsp;Рината и&nbsp;коррекция фигуры у&nbsp;Дины.</p>
+
+  <div class="offers">
+    <button class="offer" data-book="Пробная EMS-тренировка за 500 ₽" data-who="dina">
+      <span class="offer__tag"><i></i>акция</span>
+      <span class="offer__price">500&nbsp;₽</span>
+      <span class="offer__text">пробная EMS-тренировка</span>
+      <span class="offer__go">Записаться →</span>
+    </button>
+    <button class="offer" data-book="Массаж спины, первое посещение −20%" data-who="rinat">
+      <span class="offer__tag"><i></i>новым</span>
+      <span class="offer__price">−20%</span>
+      <span class="offer__text">на первый массаж у Рината</span>
+      <span class="offer__go">Записаться →</span>
+    </button>
+  </div>
+  <p class="hero__proof">Больше <b class="count" data-to="1000">1000</b> клиентов с нами</p>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="ticker__track">
+  <span>40 минут вместо 2 часов</span><b class="zap"><svg viewBox="0 0 24 36" aria-hidden="true"><path d="M15 0 L4 17 L10.5 17.5 L5 36 L20 13.5 L13 13 L19 0 Z"/><path class="zap__core" d="M15.5 2 L7 16 L12 16.3 L8.5 30 L17.5 15 L11.5 14.6 L16.5 2 Z"/></svg></b><span>тренер включён в цену</span><b class="zap"><svg viewBox="0 0 24 36" aria-hidden="true"><path d="M15 0 L4 17 L10.5 17.5 L5 36 L20 13.5 L13 13 L19 0 Z"/><path class="zap__core" d="M15.5 2 L7 16 L12 16.3 L8.5 30 L17.5 15 L11.5 14.6 L16.5 2 Z"/></svg></b><span>душ, полотенце, вода</span><b class="zap"><svg viewBox="0 0 24 36" aria-hidden="true"><path d="M15 0 L4 17 L10.5 17.5 L5 36 L20 13.5 L13 13 L19 0 Z"/><path class="zap__core" d="M15.5 2 L7 16 L12 16.3 L8.5 30 L17.5 15 L11.5 14.6 L16.5 2 Z"/></svg></b><span>можно с детьми</span><b class="zap"><svg viewBox="0 0 24 36" aria-hidden="true"><path d="M15 0 L4 17 L10.5 17.5 L5 36 L20 13.5 L13 13 L19 0 Z"/><path class="zap__core" d="M15.5 2 L7 16 L12 16.3 L8.5 30 L17.5 15 L11.5 14.6 L16.5 2 Z"/></svg></b><span>единственные в Астрахани</span><b class="zap"><svg viewBox="0 0 24 36" aria-hidden="true"><path d="M15 0 L4 17 L10.5 17.5 L5 36 L20 13.5 L13 13 L19 0 Z"/><path class="zap__core" d="M15.5 2 L7 16 L12 16.3 L8.5 30 L17.5 15 L11.5 14.6 L16.5 2 Z"/></svg></b>
+  <span>40 минут вместо 2 часов</span><b class="zap"><svg viewBox="0 0 24 36" aria-hidden="true"><path d="M15 0 L4 17 L10.5 17.5 L5 36 L20 13.5 L13 13 L19 0 Z"/><path class="zap__core" d="M15.5 2 L7 16 L12 16.3 L8.5 30 L17.5 15 L11.5 14.6 L16.5 2 Z"/></svg></b><span>тренер включён в цену</span><b class="zap"><svg viewBox="0 0 24 36" aria-hidden="true"><path d="M15 0 L4 17 L10.5 17.5 L5 36 L20 13.5 L13 13 L19 0 Z"/><path class="zap__core" d="M15.5 2 L7 16 L12 16.3 L8.5 30 L17.5 15 L11.5 14.6 L16.5 2 Z"/></svg></b><span>душ, полотенце, вода</span><b class="zap"><svg viewBox="0 0 24 36" aria-hidden="true"><path d="M15 0 L4 17 L10.5 17.5 L5 36 L20 13.5 L13 13 L19 0 Z"/><path class="zap__core" d="M15.5 2 L7 16 L12 16.3 L8.5 30 L17.5 15 L11.5 14.6 L16.5 2 Z"/></svg></b><span>можно с детьми</span><b class="zap"><svg viewBox="0 0 24 36" aria-hidden="true"><path d="M15 0 L4 17 L10.5 17.5 L5 36 L20 13.5 L13 13 L19 0 Z"/><path class="zap__core" d="M15.5 2 L7 16 L12 16.3 L8.5 30 L17.5 15 L11.5 14.6 L16.5 2 Z"/></svg></b><span>единственные в Астрахани</span><b class="zap"><svg viewBox="0 0 24 36" aria-hidden="true"><path d="M15 0 L4 17 L10.5 17.5 L5 36 L20 13.5 L13 13 L19 0 Z"/><path class="zap__core" d="M15.5 2 L7 16 L12 16.3 L8.5 30 L17.5 15 L11.5 14.6 L16.5 2 Z"/></svg></b>
+</div></div>
+
+<nav class="tabs" aria-label="Разделы">
+  <a href="#prices">Цены</a>
+  <a href="#suit">Костюм</a>
+  <a href="#procs">Процедуры</a>
+  <a href="#ems">EMS</a>
+  <a href="#faq">Вопросы</a>
+  <a href="#results">Результаты</a>
+  <a href="#contacts">Контакты</a>
+  <button class="tabs__cta" data-book="">Записаться</button>
+</nav>
+
+<main>
+
+  <!-- ЦЕНЫ -->
+  <section class="section" id="prices">
+    <h2 class="h2">Услуги и цены</h2>
+    <div class="switch" role="tablist">
+      <button role="tab" aria-selected="true" data-who="rinat">Ринат · массаж</button>
+      <button role="tab" aria-selected="false" data-who="dina">Дина · EMS и тело</button>
+    </div>
+
+    <div class="who" data-panel="rinat">
+      <figure class="who__photo"><img src="img/rinat.jpg" alt="Ринат делает массаж спины" loading="lazy"></figure>
+      <p class="who__about">Медицинское образование, работал со спортсменами сборных России, КМС по&nbsp;гандболу. Не&nbsp;«поглаживания», а&nbsp;глубокая проработка мышц.</p>
+      <ul class="price" id="price-rinat"></ul>
+    </div>
+
+    <div class="who" data-panel="dina" hidden>
+      <figure class="who__photo"><img src="img/dina.jpg" alt="Дина проводит процедуру Liposonix" loading="lazy"></figure>
+      <p class="who__about">Тренер EMS и&nbsp;специалист по&nbsp;аппаратной коррекции фигуры. Медицинское образование. Подберёт программу под вашу цель.</p>
+      <ul class="price" id="price-dina"></ul>
+    </div>
+  </section>
+
+  <!-- ИНТЕРАКТИВНЫЙ КОСТЮМ -->
+  <section class="section suit-sec" id="suit">
+    <h2 class="h2">Включите костюм сами</h2>
+    <p class="muted">Двигайте мощность импульса вправо — и посмотрите, к какой форме ведут тренировки.</p>
+    <div class="suit" style="--power:0">
+      <div class="suit__stage suit__stage--video">
+        <video class="suit__video" id="suit-video" src="img/ems-morph.mp4" poster="img/ems-morph-poster.jpg" muted playsinline preload="auto" aria-label="Девушка в EMS-костюме: при увеличении мощности фигура становится стройнее"></video>
+        <div class="suit__flash" aria-hidden="true"></div>
+        <span class="suit__spot" id="suit-spot" aria-hidden="true"></span>
+        <span class="suit__ai">иллюстрация · создано ИИ</span>
+      </div>
+      <div class="suit__panel">
+        <div class="suit__chips" role="group" aria-label="Зоны">
+          <button class="chip" data-zone="abs" aria-pressed="true">Пресс</button>
+          <button class="chip" data-zone="arms">Руки</button>
+          <button class="chip" data-zone="chest">Грудь</button>
+          <button class="chip" data-zone="legs">Бёдра</button>
+          <button class="chip" data-zone="glutes">Ягодицы</button>
+          <button class="chip" data-zone="back">Спина</button>
+        </div>
+        <p class="suit__zone" id="zone-title">Пресс</p>
+        <p class="suit__about" id="zone-text">Работают глубокие мышцы живота, которые сложно «включить» обычными упражнениями.</p>
+        <label class="suit__power">
+          <span>Мощность импульса <b id="power-n">0</b>%</span>
+          <input type="range" id="power" min="0" max="100" value="0">
+        </label>
+        <p class="suit__hint" id="power-hint">← двигайте вправо →</p>
+        <p class="suit__note">90% мышц работают одновременно — поэтому 40 минут хватает.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПРОЦЕДУРЫ ДИНЫ -->
+  <section class="section" id="procs">
+    <h2 class="h2">Процедуры Дины</h2>
+    <p class="muted">Нажмите на процедуру — описание, цена и результаты «до/после».</p>
+    <div class="procs" id="procs-list"></div>
+  </section>
+
+  <!-- EMS -->
+  <section class="section" id="ems">
+    <h2 class="h2">Почему EMS выгоднее зала</h2>
+    <p class="muted">Считаем 8 тренировок с персональным тренером.</p>
+
+    <div class="compare">
+      <div class="bill">
+        <p class="bill__title">Обычный фитнес-клуб</p>
+        <p class="bill__row"><span>Абонемент</span><span>2000 ₽</span></p>
+        <p class="bill__row"><span>Тренер, 8 × 800</span><span>6400 ₽</span></p>
+        <p class="bill__row"><span>Вода, 8 × 100</span><span>800 ₽</span></p>
+        <p class="bill__row"><span>Форма, полотенце, душевое</span><span>своё</span></p>
+        <p class="bill__total"><span>Итого</span><span>9200 ₽</span></p>
+      </div>
+      <div class="bill bill--ours">
+        <p class="bill__title">У нас</p>
+        <p class="bill__row"><span>8 персональных EMS</span><span>8000 ₽</span></p>
+        <p class="bill__row"><span>Тренер</span><span>включён</span></p>
+        <p class="bill__row"><span>Вода, полотенце, душ</span><span>включено</span></p>
+        <p class="bill__row"><span>Костюм</span><span>выдаём</span></p>
+        <p class="bill__total"><span>Итого</span><span>8000 ₽</span></p>
+      </div>
+    </div>
+    <p class="note">12 тренировок — 10000 ₽, это около 830 ₽ за занятие.</p>
+
+    <figure class="wide"><img src="img/ems-plank.jpg" alt="Тренер поправляет технику во время EMS-тренировки" loading="lazy"></figure>
+    <p class="caption">Тренер всё время рядом и следит за техникой</p>
+
+    <h3 class="h3">Что взять с собой</h3>
+    <p>Кроссовки, носки и хорошее настроение. Костюм, полотенце и воду выдаём на месте.</p>
+
+    <div class="kids">
+      <img src="img/kids.jpg" alt="Мама тренируется в EMS-костюме, рядом играет малыш" loading="lazy">
+      <div class="kids__body">
+        <p class="kids__title">К нам можно <span class="script">с детьми</span></p>
+        <p>Индивидуальный формат, без толпы. Включим малышу мультики, дадим раскраски — а у вас будут 40 минут для себя.</p>
+      </div>
+    </div>
+
+    <h3 class="h3">Это больно? Бьёт током?</h3>
+    <p>Нет. Чувствуется глубокое сокращение мышц и лёгкое покалывание — как сильный напор воды в джакузи. Импульсы мягкие, похожие на те, которыми мозг сам управляет мышцами. Тренер настраивает силу отдельно для ног, ягодиц, пресса, спины и рук.</p>
+
+    <div class="warn">
+      <p class="warn__title">Кому нельзя на EMS</p>
+      <ul>
+        <li>кардиостимулятор</li>
+        <li>беременность</li>
+        <li>эпилепсия</li>
+        <li>туберкулёз</li>
+        <li>атеросклероз, нарушения кровообращения</li>
+        <li>опухоли</li>
+        <li>сахарный диабет — только с разрешения врача</li>
+      </ul>
+      <p class="warn__foot">Сомневаетесь — посоветуйтесь с врачом, а потом приходите.</p>
+    </div>
+  </section>
+
+  <!-- ВОПРОСЫ -->
+  <section class="section" id="faq">
+    <h2 class="h2">Частые вопросы</h2>
+    <div class="faq" id="faq-list"></div>
+  </section>
+
+  <!-- РЕЗУЛЬТАТЫ -->
+  <section class="section" id="results">
+    <h2 class="h2">Результаты и работа</h2>
+    <p class="muted">Наши клиентки после Liposonix. Потяните шторку ↔</p>
+    <div class="ba-list">
+      <figure class="ba" style="--img:url(img/result-2.webp)">
+        <div class="ba__layer ba__before" role="img" aria-label="До процедуры, вид сбоку"></div>
+        <div class="ba__layer ba__after" role="img" aria-label="Сразу после Liposonix, вид сбоку"></div>
+        <span class="ba__label ba__label--l">до</span><span class="ba__label ba__label--r">после</span>
+        <span class="ba__handle" aria-hidden="true"></span>
+        <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Сравнить до и после">
+      </figure>
+      <figure class="ba" style="--img:url(img/result-3.webp)">
+        <div class="ba__layer ba__before" role="img" aria-label="До процедуры, вид спереди"></div>
+        <div class="ba__layer ba__after" role="img" aria-label="После Liposonix, вид спереди"></div>
+        <span class="ba__label ba__label--l">до</span><span class="ba__label ba__label--r">после</span>
+        <span class="ba__handle" aria-hidden="true"></span>
+        <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Сравнить до и после">
+      </figure>
+    </div>
+    <p class="muted">Ещё результаты и работа студии →</p>
+    <div class="gallery">
+      <img src="img/result-1.jpg" alt="Живот до и после курса Liposonix, три этапа" loading="lazy">
+      <img src="img/dina-vacuum.jpg" alt="Аппаратный массаж живота" loading="lazy">
+      <img src="img/ems-1.jpg" alt="EMS-тренировка: упражнение на пресс" loading="lazy">
+      <img src="img/trainer.jpg" alt="Тренер помогает клиентке выполнить упражнение в EMS-костюме" loading="lazy">
+      <img src="img/ems-3.jpg" alt="EMS-тренировка, тренер настраивает импульс на планшете" loading="lazy">
+      <img src="img/ems-2.jpg" alt="Упражнение в EMS-костюме" loading="lazy">
+      <img src="img/rinat-hands.jpg" alt="Ринат прорабатывает мышцы спины" loading="lazy">
+      <img src="img/rinat-tool.jpg" alt="Массаж спины скребком" loading="lazy">
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section class="section" id="contacts">
+    <h2 class="h2">Как нас найти</h2>
+    <dl class="contacts">
+      <dt>Залы</dt><dd>площадь Шаумяна, 5 — <span class="muted">все услуги</span><br>улица Магистральная, 29 — <span class="muted">только у Дины: EMS и аппаратные процедуры</span></dd>
+      <dt>Телефон</dt><dd><a href="tel:+79033471449">+7 903 347-14-49</a></dd>
+      <dt>Часы</dt><dd>с 8:00 до 20:00, по предварительной записи</dd>
+    </dl>
+    <div class="maps">
+      <a class="btn btn--ghost map-link" href="https://yandex.ru/maps/?text=%D0%90%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D1%8C%2C%20%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C%20%D0%A8%D0%B0%D1%83%D0%BC%D1%8F%D0%BD%D0%B0%2C%205" target="_blank" rel="noopener">Карта: пл. Шаумяна, 5</a>
+      <a class="btn btn--ghost map-link" href="https://yandex.ru/maps/?text=%D0%90%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D1%8C%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9C%D0%B0%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%2C%2029" target="_blank" rel="noopener">Карта: ул. Магистральная, 29</a>
+    </div>
+  </section>
+
+</main>
+
+<div class="dock" id="dock">
+  <button class="btn btn--main" data-book="">Записаться</button>
+</div>
+
+<dialog class="sheet proc" id="proc" aria-label="Процедура">
+  <div id="proc-body"></div>
+  <button class="sheet__cancel" data-close>Закрыть</button>
+</dialog>
+
+<dialog class="sheet book" id="chooser" aria-label="Записаться">
+  <p class="sheet__title">Записаться</p>
+  <p class="book__what" id="book-what"></p>
+  <a class="go go--wa" id="go-wa" data-go="whatsapp" href="https://wa.me/79033471449" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+    <span><b>WhatsApp <em class="go__tag">быстрее всего</em></b><small>текст уже набран — просто нажмите «Отправить»</small></span>
+  </a>
+  <a class="go go--max" id="go-max" data-go="max" href="https://max.ru/se14546602_bot" target="_blank" rel="noopener">
+    <span class="go__logo" aria-hidden="true">M</span>
+    <span><b>MAX</b><small>бот студии запишет за минуту</small></span>
+  </a>
+  <a class="go go--call" id="go-call" data-go="call" href="tel:+79033471449">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.3 1Z"/></svg>
+    <span><b>Позвонить</b><small>+7 903 347-14-49</small></span>
+  </a>
+  <p class="book__draft-l">Ваше сообщение:</p>
+  <p class="book__draft" id="book-draft"></p>
+  <button class="sheet__cancel" data-close>Отмена</button>
+</dialog>
+<dialog class="sheet maxhelp" id="maxhelp" aria-label="Как отправить в MAX">
+  <p class="sheet__title">Текст уже скопирован ✓</p>
+  <ol class="maxhelp__steps">
+    <li><b>1</b><span>В чате MAX <b>нажмите и подержите</b> поле для сообщения</span></li>
+    <li><b>2</b><span>Нажмите <b>«Вставить»</b></span></li>
+    <li><b>3</b><span>Нажмите <b>«Отправить»</b> — готово!</span></li>
+  </ol>
+  <button class="go go--max" data-maxopen>
+    <span class="go__logo" aria-hidden="true">M</span>
+    <span><b>Понятно, открыть MAX</b><small>чат студии «Про тело ЕМС»</small></span>
+  </button>
+  <button class="sheet__cancel" data-close>Назад</button>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
